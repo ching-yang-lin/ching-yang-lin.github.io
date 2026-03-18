@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ching-Yang Lin | Musashi University</title>
+    <meta name="description" content="Ching-Yang Lin - Professor at Musashi University. Research in machine learning methods for structural economic inference.">
+    <style>
+        :root {
+            --text: #2c3e50;
+            --accent: #1a5276;
+            --light: #f8f9fa;
+            --border: #dee2e6;
+            --muted: #6c757d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--text);
+            line-height: 1.7;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 0.3rem;
+        }
+
+        header .subtitle {
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        header .links {
+            margin-top: 0.8rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+        }
+
+        header .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 1.2rem;
+        }
+
+        header .links a:hover { text-decoration: underline; }
+
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            font-variant: small-caps;
+            letter-spacing: 0.05em;
+        }
+
+        p { margin-bottom: 0.8rem; }
+
+        /* Paper cards */
+        .paper {
+            border-left: 3px solid var(--accent);
+            padding: 0.8rem 1rem;
+            margin-bottom: 1.2rem;
+            background: var(--light);
+        }
+
+        .paper .title {
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .paper .meta {
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin-bottom: 0.3rem;
+        }
+
+        .paper .result {
+            font-size: 0.88rem;
+            font-style: italic;
+        }
+
+        .paper .links-row {
+            margin-top: 0.4rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+        }
+
+        .paper .links-row a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        .paper .links-row a:hover { text-decoration: underline; }
+
+        .badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.1rem 0.5rem;
+            border-radius: 3px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .badge-wp { background: #d4edda; color: #155724; }
+        .badge-pub { background: #cce5ff; color: #004085; }
+        .badge-new { background: #fff3cd; color: #856404; }
+
+        /* Published papers */
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pub-list li {
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            text-indent: -1.5rem;
+        }
+
+        .pub-list .year {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .pub-list .journal {
+            font-style: italic;
+        }
+
+        /* Code repos */
+        .repo {
+            display: flex;
+            align-items: baseline;
+            gap: 0.8rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        .repo-name {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        .repo-name a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .repo-name a:hover { text-decoration: underline; }
+
+        .repo-desc {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            font-size: 0.9rem;
+            line-height: 2;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.75rem;
+            color: var(--muted);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            header h1 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ching-Yang Lin &nbsp; 林經洋</h1>
+    <div class="subtitle">Professor, School of Liberal Arts and Sciences, Musashi University</div>
+    <div class="links">
+        <a href="https://scholar.google.co.jp/citations?user=qdbbvhkAAAAJ">Google Scholar</a>
+        <a href="https://github.com/ching-yang-lin">GitHub</a>
+        <a href="https://ideas.repec.org/f/pli703.html">RePEc</a>
+        <a href="mailto:ching-yang.lin@u.musashi.ac.jp">Email</a>
+    </div>
+</header>
+
+<section>
+    <h2>About</h2>
+    <p>
+        I am a Professor of Economics at Musashi University in Tokyo.
+        I received my Ph.D. in Economics from the University of Wisconsin&ndash;Madison.
+        My current research develops machine learning methods that go beyond prediction
+        to answer structural questions in economics&mdash;identifying regime shifts that traditional
+        econometrics cannot detect, building diagnostic protocols that break through identification
+        barriers, and constructing computational platforms for behavioral experiments.
+    </p>
+    <p>
+        Two complementary research lines: <strong>(1)</strong> ML interpretability for structural
+        decomposition&mdash;using SHAP and neural network architectures to isolate components
+        that time fixed effects absorb; <strong>(2)</strong> LLMs as experimental
+        platforms&mdash;developing protocols that transform language models from reasoning tools
+        into instruments for hypothesis testing, behavioral simulation, and structural parameter recovery.
+    </p>
+</section>
+
+<section>
+    <h2>Working Papers</h2>
+
+    <div class="paper">
+        <div class="title">Adaptive Hypothesis Testing with Large Language Models Breaks Identification Barriers That Reasoning Cannot
+            <span class="badge badge-new">NEW</span>
+        </div>
+        <div class="meta">Ching-Yang Lin &middot; 2026 &middot; Working Paper</div>
+        <div class="result">An iterative protocol achieves 98.6% diagnostic accuracy across 108 scenarios in two domains; a ReAct agent with identical tools reaches 32%. The protocol&rsquo;s contribution is architectural, not model-dependent.</div>
+        <div class="links-row">
+            <!-- <a href="#">arXiv</a> -->
+            <a href="https://github.com/ching-yang-lin/adaptive-diagnosis">Code</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="title">Specification-Free Detection of Structural Regime Shifts via LSTM Autoencoder
+            <span class="badge badge-new">NEW</span>
+        </div>
+        <div class="meta">Ching-Yang Lin, Makoto Kakinaka &middot; 2026 &middot; Working Paper</div>
+        <div class="result">An LSTM autoencoder with per-variable reconstruction error achieves 93% detection without specifying the data-generating process; Bai&ndash;Perron with the correct regression reaches 63%.</div>
+        <div class="links-row">
+            <!-- <a href="#">arXiv</a> -->
+            <a href="https://github.com/ching-yang-lin/lstm-change-detection">Code</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="title">Type Sampling: Calibrated Probability Elicitation from Large Language Models
+            <span class="badge badge-new">NEW</span>
+        </div>
+        <div class="meta">Ching-Yang Lin &middot; 2026 &middot; Working Paper</div>
+        <div class="result">A novel elicitation method that extracts calibrated continuous probabilities from large language models without fine-tuning or training data. Achieves AUC 0.74 on household financial decision prediction, robust across five model families.</div>
+        <div class="links-row">
+            <!-- <a href="#">arXiv</a> -->
+            <a href="https://github.com/ching-yang-lin/type-sampling">Code</a>
+        </div>
+    </div>
+
+    <div class="paper">
+        <div class="title">What Economic Knowledge Do Language Models Encode? Evidence from Structural Parameter Recovery
+            <span class="badge badge-wp">Working Paper</span>
+        </div>
+        <div class="meta">Ching-Yang Lin &middot; 2026 &middot; Working Paper</div>
+        <div class="result">Risk aversion converges at &gamma; = 2.1&ndash;2.3 across three elicitation strategies; time preference, loss aversion, and insurance demand do not&mdash;revealing context-dependent economic reasoning in LLMs.</div>
+    </div>
+
+    <div class="paper">
+        <div class="title">Who Listens to the Market? Macro Conditions and Stock Market Participation Across the Wealth Distribution
+            <span class="badge badge-wp">Working Paper</span>
+        </div>
+        <div class="meta">Ching-Yang Lin, Zin Mar Oo, Makoto Kakinaka &middot; 2026 &middot; Working Paper</div>
+        <div class="result">Macroeconomic conditions account for 17&ndash;21% of the prediction signal for stock participation. The effect concentrates sharply in the upper-middle wealth range: counterfactual macro swaps shift predicted participation by 33 percentage points for deciles 8&ndash;9, but only 4pp for the poorest quintile.</div>
+    </div>
+
+    <div class="paper">
+        <div class="title">Two Faces of Macro Sensitivity: Ratio-Based and Absolute Measures Reveal Opposite Heterogeneity in Housing Prices
+            <span class="badge badge-wp">Working Paper</span>
+        </div>
+        <div class="meta">Ching-Yang Lin, Chien-Yu Huang, Yuen Leng Chow &middot; 2026 &middot; Working Paper</div>
+        <div class="result">Transaction-level SHAP decomposition of 465,000 Singapore housing transactions reveals that cheaper properties show higher macro exposure (ratio) while prime-location properties show higher macro sensitivity (absolute)&mdash;a mechanical divergence with methodological implications for any ratio-based importance measure.</div>
+    </div>
+
+    <div class="paper">
+        <div class="title">Flood Risk Capitalization Under Evolving Information Regimes: Evidence from Tokyo&rsquo;s Real Estate Market
+            <span class="badge badge-wp">Working Paper</span>
+        </div>
+        <div class="meta">Ching-Yang Lin, Yuen Leng Chow &middot; 2026 &middot; Working Paper</div>
+        <div class="result">Passive information provision (online hazard maps, interactive overlays) has zero detectable effect on flood risk pricing; only mandatory disclosure and disaster salience drive market awareness, with a true flood discount of &minus;18.1% to &minus;12.2% depending on property type.</div>
+    </div>
+</section>
+
+<section>
+    <h2>Publications</h2>
+    <ul class="pub-list">
+        <li>
+            <span class="year">2025</span> &mdash;
+            Oo, Z.M., <strong>C.-Y. Lin</strong>, M. Kakinaka.
+            &ldquo;Deciphering long-term economic growth: an exploration with leading machine learning techniques.&rdquo;
+            <span class="journal">Journal of Forecasting</span>.
+        </li>
+        <li>
+            <span class="year">2025</span> &mdash;
+            Han, T.T.T., <strong>C.-Y. Lin</strong>.
+            &ldquo;Exploring long-run CO<sub>2</sub> emission patterns and the environmental Kuznets curve with machine learning methods.&rdquo;
+            <span class="journal">Innovation and Green Development</span> 4(1), 100195.
+        </li>
+        <li>
+            <span class="year">2022</span> &mdash;
+            Raksmey, U., <strong>C.-Y. Lin</strong>, M. Kakinaka.
+            &ldquo;Macroprudential regulation and financial inclusion: Any difference between developed and developing countries?&rdquo;
+            <span class="journal">Research in International Business and Finance</span> 63, 101759.
+        </li>
+        <li>
+            <span class="year">2022</span> &mdash;
+            Mustafa, A.A., <strong>C.-Y. Lin</strong>, M. Kakinaka.
+            &ldquo;Detecting market pattern changes: A machine learning approach.&rdquo;
+            <span class="journal">Finance Research Letters</span> 47.
+        </li>
+        <li>
+            <span class="year">2017</span> &mdash;
+            Simanjuntak, G.G.T.P., <strong>C.-Y. Lin</strong>.
+            &ldquo;Demand analysis of Indonesian pulpwood using transcendental logarithmic model.&rdquo;
+            <span class="journal">Indonesian Journal of Forestry Research</span> 4(2), 121&ndash;133.
+        </li>
+        <li>
+            <span class="year">2014</span> &mdash;
+            <strong>C.-Y. Lin</strong>, H. Miyamoto.
+            &ldquo;An estimated search and matching model of the Japanese labor market.&rdquo;
+            <span class="journal">Journal of the Japanese and International Economies</span> 32, 86&ndash;104.
+        </li>
+        <li>
+            <span class="year">2012</span> &mdash;
+            <strong>C.-Y. Lin</strong>, H. Miyamoto.
+            &ldquo;Gross worker flows and unemployment dynamics in Japan.&rdquo;
+            <span class="journal">Journal of the Japanese and International Economies</span> 26(1), 44&ndash;61.
+        </li>
+        <li>
+            <span class="year">2011</span> &mdash;
+            Sjarif, I.N., K. Kotani, <strong>C.-Y. Lin</strong>.
+            &ldquo;Exports and economic growth in Indonesia&rsquo;s fishery sub-sector: cointegration and error-correction models.&rdquo;
+            <span class="journal">Empirical Economics Letters</span> 10, 679&ndash;686.
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Code</h2>
+    <div class="repo">
+        <span class="repo-name"><a href="https://github.com/ching-yang-lin/type-sampling">type-sampling</a></span>
+        <span class="repo-desc">Calibrated probability elicitation from LLMs via behavioral type aggregation</span>
+    </div>
+    <div class="repo">
+        <span class="repo-name"><a href="https://github.com/ching-yang-lin/adaptive-diagnosis">adaptive-diagnosis</a></span>
+        <span class="repo-desc">Iterative hypothesis-testing protocol for structural change diagnosis</span>
+    </div>
+    <div class="repo">
+        <span class="repo-name"><a href="https://github.com/ching-yang-lin/lstm-change-detection">lstm-change-detection</a></span>
+        <span class="repo-desc">Specification-free structural break detection via LSTM autoencoder</span>
+    </div>
+    <div class="repo">
+        <span class="repo-name"><a href="https://github.com/ching-yang-lin/brainstorm">brainstorm</a></span>
+        <span class="repo-desc">Multi-model AI research debate platform</span>
+    </div>
+</section>
+
+<section>
+    <h2>Teaching</h2>
+    <p>
+        <strong>Data Science &amp; Machine Learning:</strong>
+        Python and Data Analysis, R and Data Analysis,
+        Introduction to Machine Learning and its Applications (undergraduate);
+        Application of Machine Learning in Macroeconomic Analysis (graduate).
+    </p>
+    <p>
+        <strong>Economics &amp; Finance:</strong>
+        Macroeconomics, Corporate Finance, Monetary Economics and Policy Analysis,
+        Financial Economics and Capital Market (graduate);
+        Advanced Macroeconomics (doctoral).
+    </p>
+</section>
+
+<section>
+    <h2>Education &amp; Grants</h2>
+    <p>
+        <strong>Ph.D. Economics</strong>, University of Wisconsin&ndash;Madison, 2010.
+        Advisor: Kenneth West.<br>
+        <strong>M.S. Economics</strong>, University of Wisconsin&ndash;Madison, 2006.<br>
+        <strong>M.S. Economics</strong>, National Taiwan University, 2003.<br>
+        <strong>B.A. Information Management</strong>, National Taiwan University, 2001.
+    </p>
+    <p>
+        KAKENHI Grant-in-Aid (C), 2025&ndash;2027.<br>
+        KAKENHI Young Scientists (B), 2013&ndash;2016; 2011&ndash;2013.
+    </p>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="contact-grid">
+        Musashi University, 1-26-1 Toyotamakami, Nerima, Tokyo 176-8534<br>
+        <a href="mailto:ching-yang.lin@u.musashi.ac.jp">ching-yang.lin@u.musashi.ac.jp</a>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Ching-Yang Lin. Last updated March 2026.
+</footer>
+
+</body>
+</html>
